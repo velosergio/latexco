@@ -4,8 +4,14 @@ include("database.php");
 
 if (isset($_POST['Guardar'])){
     $producto = $_POST['producto'];
-    $tipo = $_POST['tipo'];
-    $presentacion = $_POST['presentacion'];
+    $tipoP = $_POST['tipoP'];
+    $tipoE = $_POST['tipoE'];
+    $presentacionP1 = $_POST['presentacionP1'];
+    $presentacionP2 = $_POST['presentacionP2'];
+    $presentacionE1 = $_POST['presentacionE1'];
+    $presentacionE2 = $_POST['presentacionE2'];
+    $presentacionE3 = $_POST['presentacionE3'];
+    $presentacionM1 = $_POST['presentacionM1'];
     $color = $_POST['color'];
     $unidades = $_POST['unidades'];
     $direccion = $_POST['direccion'];
@@ -15,8 +21,12 @@ if (isset($_POST['Guardar'])){
     $email = $_POST['email'];
     $detalles = $_POST['detalles'];
 
-    $query = "INSERT INTO pedidos(producto,tipo,presentacion,color,unidades,direccion,nombre,ciudad,telefono,email,detalles)
-    VALUES ('$producto','$tipo','$presentacion','$color','$unidades','$direccion','$nombre','$ciudad','$telefono','$email','$detalles')";
+    $query = "INSERT INTO pedidos(producto,tipoP,tipoE,presentacionP1,presentacionP2,presentacionE1,
+    presentacionE2,presentacionE3,presentacionM1, color,unidades,direccion,nombre,ciudad,telefono,
+    email,detalles)
+    VALUES ('$producto','$tipoP','$tipoE','$presentacionP1','$presentacionP2','$presentacionE1',
+    '$presentacionE2','$presentacionE3','$presentacionM1', '$color','$unidades','$direccion', '$nombre',
+    '$ciudad','$telefono','$email','$detalles')";
 
     $result = mysqli_query($conn, $query);
 

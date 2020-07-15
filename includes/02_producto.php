@@ -27,7 +27,7 @@
             </div>
             <!-- Tipo Pintura-->
             <div class="form-row" style="display:none;" id="tipoPintura">
-                <select name="tipo" id="selectPint" class="form-control" onchange="mostrarpresentacion();">
+                <select name="tipoP" id="selectPint" class="form-control" onchange="mostrarpresentacion();">
                     <option value="0">Selecciona un tipo de Pintura</option>
                     <option value="Fachada">Fachada</option>
                     <option value="Tipo 1">Tipo 1</option>
@@ -40,7 +40,7 @@
             </div>
             <!-- Tipo Estuco -->
             <div class="form-row" style="display:none;" id="tipoEstuco">
-                <select name="tipo" id="selectEstuco" class="form-control" onchange="mostrarpresentacion();">
+                <select name="tipoE" id="selectEstuco" class="form-control" onchange="mostrarpresentacion();">
                     <option value="0">Selecciona un tipo de Estuco</option>
                     <option value="Acrilico Grano">Acrilico Grano</option>
                     <option value="Acrilico Relleno">Acrilico Relleno</option>
@@ -52,7 +52,7 @@
             </div>            
             <!-- Presentacion Pinturas Galon | Cuñete | Caja 3,5 | Tambor-->
             <div class="form-row" style="display:none;" id="presentacionGC3T">
-                <select name="presentacion" id="selectPresent" class="form-control" onchange="mostrarColor();">
+                <select name="presentacionP1" id="selectPresent" class="form-control" onchange="mostrarColor();">
                     <option value="0">Selecciona la presentacion</option>
                     <option value="Galon">Galón</option>
                     <option value="Cunete">Cuñete</option>
@@ -62,7 +62,7 @@
             </div>
             <!-- Presentacion Pinturas Cuñete | Caja 3,5 | Tambor-->
             <div class="form-row" style="display:none;" id="presentacionC3T">
-                <select name="presentacion" id="selectPresent" class="form-control" onchange="mostrarColor();">
+                <select name="presentacionP2" id="selectPresent" class="form-control" onchange="mostrarColor();">
                     <option value="0">Selecciona la presentacion</option>
                     <option value="Cunete">Cuñete</option>
                     <option value="Caja 3,5 Galones">Caja 3,5 Galones</option>
@@ -71,7 +71,7 @@
             </div>
             <!-- Presentacion Estucos Cuñete | Caja 20KG | Tambor | Bolsa 25kg | Bolsa 50kg -->
             <div class="form-row" style="display:none;" id="presentacionC2TB25">
-                <select name="presentacion" id="selectPresent" class="form-control" onchange="mostrarCantidad();">
+                <select name="presentacionE1" id="selectPresent" class="form-control" onchange="mostrarCantidad();">
                     <option value="0">Selecciona la presentacion</option>
                     <option value="Cunete">Cuñete</option>
                     <option value="Caja 20kg">Caja 20kg</option>
@@ -82,7 +82,7 @@
             </div>
             <!-- Presentacion Estucos Galon | Cuñete | Caja 20KG | Tambor | Bolsa 25kg | Bolsa 50kg -->
             <div class="form-row" style="display:none;" id="presentacionGC2TB25">
-                <select name="presentacion" id="selectPresent" class="form-control" onchange="mostrarCantidad();">
+                <select name="presentacionE2" id="selectPresent" class="form-control" onchange="mostrarCantidad();">
                     <option value="0">Selecciona la presentacion</option>
                     <option value="Galon">Galón</option>
                     <option value="Cunete">Cuñete</option>
@@ -94,14 +94,14 @@
             </div>
             <!-- Presentacion Estucos Bolsa 25kg -->
             <div class="form-row" style="display:none;" id="presentacionB2">
-                <select name="presentacion" id="selectPresent" class="form-control" onchange="mostrarCantidad();">
+                <select name="presentacionE3" id="selectPresent" class="form-control" onchange="mostrarCantidad();">
                     <option value="0">Selecciona la presentacion</option>
                     <option value="Bolsa 25kg">Bolsa 25Kg</option>
                 </select>
             </div>
             <!-- Presentacion Mastic Galon | Cuñete | Caja 20kg | Tambor -->
             <div class="form-row" style="display:none;" id="presentacionGC2T">
-                <select name="presentacion" id="selectPresent" class="form-control" onchange="mostrarCantidad();">
+                <select name="presentacionM1" id="selectPresent" class="form-control" onchange="mostrarCantidad();">
                     <option value="0">Selecciona la presentacion</option>
                     <option value="Galon">Galón</option>
                     <option value="Cunete">Cuñete</option>
