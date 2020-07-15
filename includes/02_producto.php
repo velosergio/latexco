@@ -19,8 +19,8 @@
                             <option value="Pintura">Pintura</option>
                             <option value="Estuco">Estuco</option>
                             <option value="Mastic">Mastic 3 en 1</option>
-                            <option value="Pegamento">Pegamento</option>
-                            <option value="Cemento">Cemento</option>
+                            <option value="Aditivos y Boquillas">Aditivos y Boquillas</option>
+                            <option value="Pegante">Pegante</option>
                         </select>
                     </div>
                 </div>
@@ -49,7 +49,28 @@
                     <option value="Yeso Interior">Yeso Interior</option>
                     <option value="Yeso Exterior">Yeso Exterior</option>
                 </select>
-            </div>            
+            </div>
+            <!-- Tipo Aditivos Y Boquillas -->
+            <div class="form-row" style="display:none;" id="tipoAditivos">
+                <select name="tipoA" id="selectAdit" class="form-control" onchange="mostrarpresentacion();">
+                    <option value="0">Selecciona un tipo de Aditivos / Boquilla</option>
+                    <option value="Pegadurmix">Pegadurmix</option>
+                    <option value="Duraboquilla latex ceramica">Duraboquilla latex ceramica</option>
+                    <option value="Duraboquilla latex porcelanica">Duraboquilla latex porceramica</option>
+                    <option value="Blancodur boquilla y resanador">Blancodur boquilla y resanador</option>
+                </select>
+            </div>
+            <!-- Tipo Pegantes -->
+            <div class="form-row" style="display:none;" id="tipoPegantes">
+                <select name="tipoPG" id="selectPegant" class="form-control" onchange="mostrarpresentacion();">
+                    <option value="0">Selecciona un tipo de Pegante</option>
+                    <option value="Pegadur Ceramico">Pegadur Ceramico</option>
+                    <option value="Pegadur Percelanato">Pegadur Percelanato</option>
+                    <option value="Pegadur Latex">Pegadur Latex</option>
+                    <option value="Pegadur Marmol">Pegadur Marmol</option>
+                    <option value="Pegadur Piscina">Pegadur Piscina</option>
+                </select>
+            </div> 
             <!-- Presentacion Pinturas Galon | Cuñete | Caja 3,5 | Tambor-->
             <div class="form-row" style="display:none;" id="presentacionGC3T">
                 <select name="presentacionP1" id="selectPresent" class="form-control" onchange="mostrarColor();">
@@ -102,14 +123,36 @@
             <!-- Presentacion Mastic Galon | Cuñete | Caja 20kg | Tambor -->
             <div class="form-row" style="display:none;" id="presentacionGC2T">
                 <select name="presentacionM1" id="selectPresent" class="form-control" onchange="mostrarCantidad();">
-                    <option value="0">Selecciona la presentacion</option>
+                    <option value="0">Selecciona la presentacion Mastic</option>
                     <option value="Galon">Galón</option>
                     <option value="Cunete">Cuñete</option>
                     <option value="Caja 20kg">Caja 20kg</option>
                     <option value="Tambor">Tambor</option>
                 </select>
-            </div>            
-            <!-- Color Pintura-->
+            </div>
+            <!-- Presentacion Aditivos Bolsa 2kg -->
+            <div class="form-row" style="display:none;" id="presentacionA1">
+                <select name="presentacionA1" id="selectPresent" class="form-control" onchange="mostrarCantidad();">
+                    <option value="0">Selecciona la presentacion</option>
+                    <option value="Bolsa 2kg">Bolsa 2Kg</option>
+                </select>
+            </div>
+            <!-- Presentacion Pegamento Bolsa 10kg | Bolsa 25kg -->
+            <div class="form-row" style="display:none;" id="presentacionPEGA1">
+                <select name="presentacionPEGA1" id="selectPresent" class="form-control" onchange="mostrarColor();">
+                    <option value="0">Selecciona la presentacion</option>
+                    <option value="Bolsa 10kg">Bolsa 10Kg</option>
+                    <option value="Bolsa 25kg">Bolsa 25Kg</option>
+                </select>
+            </div>
+            <!-- Presentacion Pegamento Bolsa 25kg -->
+            <div class="form-row" style="display:none;" id="presentacionPEGA2">
+                <select name="presentacionPEGA2" id="selectPresent" class="form-control" onchange="mostrarColor();">
+                    <option value="0">Selecciona la presentacion</option>
+                    <option value="Bolsa 25kg">Bolsa 25Kg</option>
+                </select>
+            </div>
+            <!-- Color Pintura -->
             <div class="form-row" style="display:none;" id="color">
                 <select name="color" id="selectColor" class="form-control" onchange="mostrarCantidad();">
                     <option value="0">Selecciona un color</option>
@@ -120,6 +163,14 @@
                     <option value="Rojo">Rojo</option>
                     <option value="Verde">Verde</option>
                     <option value="Morado">Morado</option>
+                </select>
+            </div>
+            <!-- Color Pintura Blanco y Gris -->
+            <div class="form-row" style="display:none;" id="colorBG">
+                <select name="color" id="selectColor" class="form-control" onchange="mostrarCantidad();">
+                    <option value="0">Selecciona un color</option>
+                    <option value="Blanco">Blanco</option>
+                    <option value="Gris">Gris</option>
                 </select>
             </div>
             <!-- Cantidad -->

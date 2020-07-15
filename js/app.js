@@ -4,51 +4,53 @@ function obtenerDatos() {
     //Producto
     var selObj = document.getElementById("selectProducto");
     var selValue = selObj.options[selObj.selectedIndex].text;
-    //TipoPintura
-    var selPint = document.getElementById("selectPint");
-    var PintValue = selPint.options[selPint.selectedIndex].text;
-    //TipoEstuco
-    var selEst = document.getElementById("selectEstuco");
-    var EstValue = selEst.options[selEst.selectedIndex].text;
-    //TipoPresentación
-    var selPresent = document.getElementById("selectPresent");
-    var presentValue = selPresent.options[selPresent.selectedIndex].text;
-    //Color
-    var selCol = document.getElementById("selectColor");
-    var colValue = selCol.options[selCol.selectedIndex].text;
-    //Cantidad
-    var selCant = document.getElementById("selectCantidad");
-    var cantValue = selCant.options[selCant.selectedIndex].text;
-      
+
     // Primer Condicional
-    if (selValue === "Pintura"){
+    //Pintura
+    if(selValue === "Pintura"){
         mostrarTipoP();
-        console.log("Entro en pintura");}
-    if (selValue === "Estuco") {
+    }
+    //Estuco
+    if(selValue === "Estuco"){
         mostrarTipoE();
-        console.log("Entro en Estuco");}
-    if (selValue === "Mastic") {
+    }
+    //Mastic
+    if(selValue === "Mastic 3 en 1"){
+        ocultarpresentaciones();
         ocultarTipos();
-        mostrarB2();
-        console.log("Entro en Mastic");}
-        else {
-        div = document.getElementById('color');
-        div.style.display = 'none';
-        mostrarCantidad();
+        mostrarGC2T();
+    }
+    //Aditivos y Boquillas
+    if(selValue === "Aditivos y Boquillas"){
+        mostrarTipoA();
+    }
+    //Pegante
+    if(selValue === "Pegante"){
+        mostrarTipoPega();
     }
 }
 
 function mostrarTipoP() {
-    div = document.getElementById('tipoEstuco');
-    div.style.display = 'none';
+    ocultarTipos();
     div = document.getElementById('tipoPintura');
     div.style.display = '';
 }
 
 function mostrarTipoE() {
-    div = document.getElementById('tipoPintura');
-    div.style.display = 'none';
+    ocultarTipos();
     div = document.getElementById('tipoEstuco');
+    div.style.display = '';
+}
+
+function mostrarTipoA(){
+    ocultarTipos();
+    div = document.getElementById('tipoAditivos');
+    div.style.display = '';
+}
+
+function mostrarTipoPega(){
+    ocultarTipos();
+    div = document.getElementById('tipoPegantes');
     div.style.display = '';
 }
 
@@ -57,14 +59,26 @@ function ocultarTipos(){
     div.style.display = 'none';
     div = document.getElementById('tipoEstuco');
     div.style.display = 'none';
+    div = document.getElementById('tipoAditivos');
+    div.style.display = 'none';
+    div = document.getElementById('tipoPegantes');
+    div.style.display = 'none';
 }
 
 function mostrarpresentacion() {
-    //Obtener valores de Pintura / Estuco
+    //Obtener valores de Pintura
     var selPint = document.getElementById("selectPint");
     var PintValue = selPint.options[selPint.selectedIndex].text;
+    //Obtener valores de Estuco
     var selEst = document.getElementById("selectEstuco");
     var EstValue = selEst.options[selEst.selectedIndex].text;
+    //Obtener valores de Aditivos
+    var selAdit = document.getElementById("selectAdit");
+    var aditValue = selAdit.options[selAdit.selectedIndex].text;
+    //Obtener valores de Pegantes
+    var selPega = document.getElementById("selectPegant");
+    var pegaValue = selPega.options[selPega.selectedIndex].text;
+    
     //Fachada
     if(PintValue === "Fachada"){
         mostrarGC3T();
@@ -113,7 +127,42 @@ function mostrarpresentacion() {
     if (EstValue === "Yeso Interior"){
         mostrarB2();
     }
-
+    //Pegadur
+    if (aditValue === "Pegadurmix"){
+        mostrarA1();
+    }
+    //Duraboquilla latex ceramica
+    if (aditValue === "Duraboquilla latex ceramica"){
+        mostrarA1();
+    }
+    //Duraboquilla latex porceramica
+    if (aditValue === "Duraboquilla latex porceramica"){
+        mostrarA1();
+    }
+    //Blancodur boquilla y resanador
+    if (aditValue === "Blancodur boquilla y resanador"){
+        mostrarA1();
+    }
+    //Pegadur Ceramico
+    if (pegaValue === "Pegadur Ceramico"){
+        mostrarPEGA1();
+    }
+    //Pegadur Percelanato
+    if (pegaValue === "Pegadur Percelanato"){
+        mostrarPEGA2();
+    }
+    //Pegadur Latex
+    if (pegaValue === "Pegadur Latex"){
+        mostrarPEGA2();
+    }
+    //Pegadur Marmol
+    if (pegaValue === "Pegadur Marmol"){
+        mostrarPEGA2();
+    }
+    //Pegadur Piscina
+    if (pegaValue === "Pegadur Piscina"){
+        mostrarPEGA2();
+    } 
 } 
 
 //Mostrar Presentaciones
@@ -153,6 +202,24 @@ function mostrarGC2T(){
     div.style.display = '';
 }
 
+function mostrarA1(){
+    ocultarpresentaciones();
+    div = document.getElementById('presentacionA1');
+    div.style.display = '';
+}
+
+function mostrarPEGA1(){
+    ocultarpresentaciones();
+    div = document.getElementById('presentacionPEGA1');
+    div.style.display = '';
+}
+
+function mostrarPEGA2(){
+    ocultarpresentaciones();
+    div = document.getElementById('presentacionPEGA2');
+    div.style.display = '';
+}
+
 //Ocultar presentaciones
 function ocultarpresentaciones() {
     div = document.getElementById('presentacionC3T');
@@ -167,11 +234,30 @@ function ocultarpresentaciones() {
     div.style.display = 'none';
     div = document.getElementById('presentacionGC2T');
     div.style.display = 'none';
+    div = document.getElementById('presentacionA1');
+    div.style.display = 'none';
+    div = document.getElementById('presentacionPEGA1');
+    div.style.display = 'none';
+    div = document.getElementById('presentacionPEGA2');
+    div.style.display = 'none';
 }
 
 function mostrarColor() {
+    //Producto
+    var selObj = document.getElementById("selectProducto");
+    var selValue = selObj.options[selObj.selectedIndex].text;
+    
+    div = document.getElementById('colorBG');
+    div.style.display = 'none';
     div = document.getElementById('color');
-    div.style.display = '';
+    div.style.display = 'none';
+
+    if(selValue === "Pegante"){
+        div = document.getElementById('colorBG');
+        div.style.display = '';
+    } else{
+    div = document.getElementById('color');
+    div.style.display = '';}
 }
 
 function mostrarCantidad() {

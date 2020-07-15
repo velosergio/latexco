@@ -7,6 +7,13 @@ Para uso comercial de www.latexco.com.co
 
 Diario de desarrollo
 
+### 0.0.0.3
+
+- Agregado Aditivos y Boquillas
+- Agregado Pegante
+- Solucion de problemas conocidos al mostrar / ocultar campos
+- Moficiacion de Colores para los pegantes
+
 ### 0.0.0.2
 
 - Resuelto Bug que no mostraba el tipo ni la presentacion de algunos productos
