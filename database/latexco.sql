@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 15-07-2020 a las 15:24:46
+-- Tiempo de generación: 04-08-2020 a las 18:29:13
 -- Versión del servidor: 10.4.10-MariaDB
 -- Versión de PHP: 7.4.0
 
@@ -32,14 +32,8 @@ DROP TABLE IF EXISTS `pedidos`;
 CREATE TABLE IF NOT EXISTS `pedidos` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `producto` varchar(255) NOT NULL,
-  `tipoP` varchar(255) NOT NULL,
-  `tipoE` varchar(255) NOT NULL,
-  `presentacionP1` varchar(255) NOT NULL,
-  `presentacionP2` varchar(255) NOT NULL,
-  `presentacionE1` varchar(255) NOT NULL,
-  `presentacionE2` varchar(255) NOT NULL,
-  `presentacionE3` varchar(255) NOT NULL,
-  `presentacionM1` varchar(255) NOT NULL,
+  `tipo` varchar(255) NOT NULL,
+  `presentacion` varchar(255) NOT NULL,
   `color` varchar(255) NOT NULL,
   `unidades` varchar(255) NOT NULL,
   `direccion` varchar(255) NOT NULL,
@@ -50,7 +44,7 @@ CREATE TABLE IF NOT EXISTS `pedidos` (
   `detalles` varchar(255) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=71 DEFAULT CHARSET=latin1;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

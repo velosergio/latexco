@@ -7,6 +7,14 @@ Para uso comercial de www.latexco.com.co
 
 Diario de desarrollo
 
+### 0.0.0.4 - Matarife
+
+- [New!] Se crea la carpeta database con el schema de la base de datos
+- [Update] Se deshabilita de forma temporal, la opcion Cemento del primer formulario
+- [Bug] se corrije bug que no determinaba correctamente la eleccion del usuario
+- [New!] Se instala y configura PHPMailer
+- [Update] Se optimiza la configuracion de la base de datos y se simplifican las tablas de Tipos y Presentaciones 
+
 ### 0.0.0.3
 
 - Agregado Aditivos y Boquillas
