@@ -4,6 +4,7 @@ use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
 include("database.php");
+session_start();
 
 if (isset($_POST['Guardar'])){
     //Adquisicion de todas las variables
@@ -11,7 +12,7 @@ if (isset($_POST['Guardar'])){
     $tipoP = $_POST['tipoP'];
     $tipoE = $_POST['tipoE'];
     $tipoA = $_POST['tipoA'];
-    // Comprobar tipo de porducto
+    // Comprobar tipo de producto
     if ($tipoP == null){
         if($tipoE == null){
             $tipo = $_POST['tipoA'];
@@ -57,7 +58,12 @@ if (isset($_POST['Guardar'])){
             } else { $presentacion = $_POST['presentacionM1']; }
         } else { $presentacion = $presentacionE; }
     } else { $presentacion = $presentacionP; }
-    $color = $_POST['color'];
+    // Determinar tipo de Color Pintura vs Pegante
+    $colorBG = $_POST['colorBG'];    
+    $colorT = $_POST['color'];
+    if($colorBG == null){
+        $color = $_POST['color'];
+    } else { $color = $_POST['colorBG']; }
     $unidades = $_POST['unidades'];
     $direccion = $_POST['direccion'];
     $nombre = $_POST['nombre'];
@@ -66,16 +72,25 @@ if (isset($_POST['Guardar'])){
     $email = $_POST['email'];
     $detalles = $_POST['detalles'];
 
-    $query = "INSERT INTO pedidos(producto,tipo,presentacion,color,unidades,direccion,nombre,ciudad,
-    telefono,email,detalles)
-    VALUES ('$producto','$tipo','$presentacion','$color','$unidades','$direccion','$nombre','$ciudad',
-    '$telefono','$email','$detalles')";
+    $sql= "insert into pedidos(producto,tipo,presentacion,color,unidades,direccion,nombre,ciudad,
+    telefono,email,detalles) values('$producto','$tipo','$presentacion','$color','$unidades'
+    ,'$direccion','$nombre','$ciudad','$telefono','$email','$detalles')";
 
-    $result = mysqli_query($conn, $query);
+    $sql = $connect->prepare($sql);
 
-    if(!$result){
-        die("El Query Fallo");
-    }
+    $sql->bindParam(':producto',$producto,PDO::PARAM_STR, 25);
+    $sql->bindParam(':tipo',$tipo,PDO::PARAM_STR, 25);
+    $sql->bindParam(':presentacion',$presentacion,PDO::PARAM_STR, 25);
+    $sql->bindParam(':color',$color,PDO::PARAM_STR, 25);
+    $sql->bindParam(':unidades',$unidades,PDO::PARAM_STR, 25);
+    $sql->bindParam(':direccion',$direccion,PDO::PARAM_STR, 25);
+    $sql->bindParam(':nombre',$nombre,PDO::PARAM_STR, 25);
+    $sql->bindParam(':ciudad',$ciudad,PDO::PARAM_STR, 25);
+    $sql->bindParam(':telefono',$telefono,PDO::PARAM_STR, 25);
+    $sql->bindParam(':email',$email,PDO::PARAM_STR, 25);
+    $sql->bindParam(':detalles',$detalles,PDO::PARAM_STR, 25);
+
+    $sql->execute();
 
     //Enviar_Correo();
     require 'PHPMailer/Exception.php';
@@ -91,7 +106,7 @@ if (isset($_POST['Guardar'])){
     $mail->Host       = 'smtp.gmail.com';                       // Set the SMTP server to send through "editado"
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
     $mail->Username   = 'contacto.latexco@gmail.com';           // SMTP username
-    $mail->Password   = 'secret';                            // SMTP password
+    $mail->Password   = 'jo_rzQwjY';                               // SMTP password
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
     $mail->Port       = 587;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 

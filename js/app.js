@@ -116,11 +116,11 @@ function mostrarpresentacion() {
         mostrarC2TB25();
     }
     // Acrilico Interior  
-    if (EstValue === "Acrilico Relleno") {
+    if (EstValue === "Acrilico Interior") {
         mostrarGC2TB25();
     }
     //Acrilico Exterior
-    if (EstValue === "Acrilico Relleno"){
+    if (EstValue === "Acrilico Exterior"){
         mostrarGC2TB25();
     }
     //Estuco Yeso Interior
@@ -243,10 +243,10 @@ function ocultarpresentaciones() {
 }
 
 function mostrarColor() {
-    //Producto
+    //Detemrinar el tipo de Producto
     var selObj = document.getElementById("selectProducto");
     var selValue = selObj.options[selObj.selectedIndex].text;
-    
+
     div = document.getElementById('colorBG');
     div.style.display = 'none';
     div = document.getElementById('color');

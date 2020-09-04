@@ -20,7 +20,7 @@
                             <option value="Estuco">Estuco</option>
                             <option value="Mastic">Mastic 3 en 1</option>
                             <option value="Aditivos y Boquillas">Aditivos y Boquillas</option>
-                            <!--<option value="Pegante">Pegante</option>-->
+                            <option value="Pegante">Pegante</option>
                         </select>
                     </div>
                 </div>
@@ -71,12 +71,12 @@
                     <option value="Pegadur Piscina">Pegadur Piscina</option>
                 </select>
             </div> 
-            <!-- Presentacion Pinturas Galon | Cuñete | Caja 3,5 | Tambor-->
+            <!-- Presentacion Pinturas Galón | Cuñete | Caja 3,5 | Tambor-->
             <div class="form-row" style="display:none;" id="presentacionGC3T">
                 <select name="presentacionP1" id="selectPresent" class="form-control" onchange="mostrarColor();">
                     <option value="">Selecciona la presentacion</option>
-                    <option value="Galon">Galón</option>
-                    <option value="Cunete">Cuñete</option>
+                    <option value="Galón">Galón</option>
+                    <option value="Cuñete">Cuñete</option>
                     <option value="Caja 3,5 Galones">Caja 3,5 Galones</option>
                     <option value="Tambor">Tambor</option>
                 </select>
@@ -85,7 +85,7 @@
             <div class="form-row" style="display:none;" id="presentacionC3T">
                 <select name="presentacionP2" id="selectPresent" class="form-control" onchange="mostrarColor();">
                     <option value="">Selecciona la presentacion</option>
-                    <option value="Cunete">Cuñete</option>
+                    <option value="Cuñete">Cuñete</option>
                     <option value="Caja 3,5 Galones">Caja 3,5 Galones</option>
                     <option value="Tambor">Tambor</option>
                 </select>
@@ -94,19 +94,19 @@
             <div class="form-row" style="display:none;" id="presentacionC2TB25">
                 <select name="presentacionE1" id="selectPresent" class="form-control" onchange="mostrarCantidad();">
                     <option value="">Selecciona la presentacion</option>
-                    <option value="Cunete">Cuñete</option>
+                    <option value="Cuñete">Cuñete</option>
                     <option value="Caja 20kg">Caja 20kg</option>
                     <option value="Tambor">Tambor</option>
                     <option value="Bolsa 25kg">Bolsa 25Kg</option>
                     <option value="Bolsa 50kg">Bolsa 50Kg</option>
                 </select>
             </div>
-            <!-- Presentacion Estucos Galon | Cuñete | Caja 20KG | Tambor | Bolsa 25kg | Bolsa 50kg -->
+            <!-- Presentacion Estucos Galón | Cuñete | Caja 20KG | Tambor | Bolsa 25kg | Bolsa 50kg -->
             <div class="form-row" style="display:none;" id="presentacionGC2TB25">
                 <select name="presentacionE2" id="selectPresent" class="form-control" onchange="mostrarCantidad();">
                     <option value="">Selecciona la presentacion</option>
-                    <option value="Galon">Galón</option>
-                    <option value="Cunete">Cuñete</option>
+                    <option value="Galón">Galón</option>
+                    <option value="Cuñete">Cuñete</option>
                     <option value="Caja 20kg">Caja 20kg</option>
                     <option value="Tambor">Tambor</option>
                     <option value="Bolsa 25kg">Bolsa 25Kg</option>
@@ -120,12 +120,12 @@
                     <option value="Bolsa 25kg">Bolsa 25Kg</option>
                 </select>
             </div>
-            <!-- Presentacion Mastic Galon | Cuñete | Caja 20kg | Tambor -->
+            <!-- Presentacion Mastic Galón | Cuñete | Caja 20kg | Tambor -->
             <div class="form-row" style="display:none;" id="presentacionGC2T">
                 <select name="presentacionM1" id="selectPresent" class="form-control" onchange="mostrarCantidad();">
                     <option value="">Selecciona la presentacion Mastic</option>
-                    <option value="Galon">Galón</option>
-                    <option value="Cunete">Cuñete</option>
+                    <option value="Galón">Galón</option>
+                    <option value="Cuñete">Cuñete</option>
                     <option value="Caja 20kg">Caja 20kg</option>
                     <option value="Tambor">Tambor</option>
                 </select>
@@ -152,7 +152,7 @@
                     <option value="Bolsa 25kg">Bolsa 25Kg</option>
                 </select>
             </div>
-            <!-- Color Pintura -->
+            <!-- Color Pintura --> 
             <div class="form-row" style="display:none;" id="color">
                 <select name="color" id="selectColor" class="form-control" onchange="mostrarCantidad();">
                     <option value="">Selecciona un color</option>
@@ -182,10 +182,59 @@
                     <option value="3">3 unidades</option>
                     <option value="4">4 unidades</option>
                     <option value="5">5 unidades</option>
+                    <option value="6">6 unidades</option>
+                    <option value="7">7 unidades</option>
+                    <option value="8">8 unidades</option>
+                    <option value="9">9 unidades</option>
                     <option value="10">10 unidades</option>
+                    <option value="11">11 unidades</option>
                     <option value="12">12 unidades</option>
+                    <option value="13">13 unidades</option>
+                    <option value="14">14 unidades</option>
+                    <option value="15">15 unidades</option>
+                    <option value="16">16 unidades</option>
+                    <option value="17">17 unidades</option>
+                    <option value="18">18 unidades</option>
+                    <option value="19">19 unidades</option>
+                    <option value="20">20 unidades</option>
                 </select>
             </div>
+            <!-- Cantidadx4
+            <div class="form-row" style="display:none;" id="unidadesx4">
+                <select name="unidades" id="selectCantidad" class="form-control">
+                    <option value="">Cuantas unidades:</option>
+                    <option value="4">4 unidades</option>
+                    <option value="8">8 unidades</option>
+                    <option value="12">12 unidades</option>
+                    <option value="16">16 unidades</option>
+                    <option value="20">20 unidades</option>
+                    <option value="24">24 unidades</option>
+                    <option value="28">28 unidades</option>
+                </select>
+            </div> -->
+            <!-- Cantidadx5
+            <div class="form-row" style="display:none;" id="unidadesx5">
+                <select name="unidades" id="selectCantidad" class="form-control">
+                    <option value="">Cuantas unidades:</option>
+                    <option value="5">5 unidades</option>
+                    <option value="10">10 unidades</option>
+                    <option value="15">15 unidades</option>
+                    <option value="20">20 unidades</option>
+                    <option value="25">25 unidades</option>
+                    <option value="30">30 unidades</option>
+                    <option value="35">35 unidades</option>
+                </select>
+            </div>-->
+            <!-- Cantidadx15 
+            <div class="form-row" style="display:none;" id="unidadesx15">
+                <select name="unidades" id="selectCantidad" class="form-control">
+                    <option value="">Cuantas unidades:</option>
+                    <option value="15">15 unidades</option>
+                    <option value="30">30 unidades</option>
+                    <option value="45">45 unidades</option>
+                    <option value="60">60 unidades</option>
+                </select>
+            </div> -->
         </div>
     </div>
 </section>
