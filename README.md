@@ -12,13 +12,13 @@ Para uso comercial de www.latexco.com.co
 
 Aditivos y Boquillas Minimo (15): 15 en 15
 Mastic - Pintura - Estuco:
-    - Galon         (4)
-    - Cuñete        (1)
-    - Caja 20Kg     (1)
-    - Tambor        (1)
+    - Galon         (04)
+    - Cuñete        (01)
+    - Caja 20 Kg    (01)
+    - Tambor        (01)
     - Bolsa 2k      (15)
-    - Bolsa 10Kg    (5)
-    - Bolsa 25kg    (1)
+    - Bolsa 10 Kg   (05)
+    - Bolsa 25 kg   (01)
 
 ## Change Notes:
 

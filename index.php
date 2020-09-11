@@ -1,4 +1,15 @@
-<?php include ("php/database.php") ?>
+<?php
+include ("php/database.php");
+// Inicializar la sesion
+session_start();
+
+// Comprobacion del estado del usuario, si no esta loggeado redirecionar
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: login.php");
+    exit;
+}
+
+?>
 
 <!DOCTYPE html>
 <html>
@@ -34,7 +45,7 @@
 <footer class="sticky-footer bg-white">
     <div class="container my-auto">
         <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Latexco 2020</span>
+            <span> <?php echo htmlspecialchars($_SESSION["nombre"]); ?> Copyright &copy; Latexco 2020</span>
         </div>
     </div>
 </footer>

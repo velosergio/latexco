@@ -261,30 +261,30 @@
                             </thead>
                             <tfoot>
                               <tr>
-                                <th rowspan="1" colspan="1">Name</th>
-                                <th rowspan="1" colspan="1">Position</th>
-                                <th rowspan="1" colspan="1">Office</th>
-                                <th rowspan="1" colspan="1">Age</th>
-                                <th rowspan="1" colspan="1">Start date</th>
-                                <th rowspan="1" colspan="1">Salary</th>
+                                <th rowspan="1" colspan="1">Cliente</th>
+                                <th rowspan="1" colspan="1">Producto</th>
+                                <th rowspan="1" colspan="1">Direccion</th>
+                                <th rowspan="1" colspan="1">Fecha</th>
+                                <th rowspan="1" colspan="1">Estado</th>
+                                <th rowspan="1" colspan="1">Acciones</th>
                               </tr>
                             </tfoot>
                             <tbody>
                               <tr role="row" class="odd">
                                 <td class="sorting_1">Airi Satou</td>
-                                <td>Accountant</td>
+                                <td>Pintura Tipo 2 (Galón) Blanco x 12 unidades</td>
                                 <td>Tokyo</td>
-                                <td>33</td>
                                 <td>2008/11/28</td>
-                                <td>$162,700</td>
+                                <td>Por enviar</td>
+                                <td>Ver, Actualizar, Eliminar</td>
                               </tr>
                               <tr role="row" class="even">
                                 <td class="sorting_1">Angelica Ramos</td>
-                                <td>Chief Executive Officer (CEO)</td>
+                                <td>Pintura Tipo 1 (Galón) Negro x 2 unidades</td>
                                 <td>London</td>
-                                <td>47</td>
                                 <td>2009/10/09</td>
-                                <td>$1,200,000</td>
+                                <td>Por enviar</td>
+                                <td>Ver, Actualizar, Eliminar</td>
                               </tr>
                             </tbody>
                           </table>
@@ -309,12 +309,6 @@
                                   data-dt-idx="2" tabindex="0" class="page-link">2</a></li>
                               <li class="paginate_button page-item "><a href="#" aria-controls="dataTable"
                                   data-dt-idx="3" tabindex="0" class="page-link">3</a></li>
-                              <li class="paginate_button page-item "><a href="#" aria-controls="dataTable"
-                                  data-dt-idx="4" tabindex="0" class="page-link">4</a></li>
-                              <li class="paginate_button page-item "><a href="#" aria-controls="dataTable"
-                                  data-dt-idx="5" tabindex="0" class="page-link">5</a></li>
-                              <li class="paginate_button page-item "><a href="#" aria-controls="dataTable"
-                                  data-dt-idx="6" tabindex="0" class="page-link">6</a></li>
                               <li class="paginate_button page-item next" id="dataTable_next"><a href="#"
                                   aria-controls="dataTable" data-dt-idx="7" tabindex="0" class="page-link">Next</a></li>
                             </ul>

@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
   `direccion` varchar(255) CHARACTER SET latin1 NOT NULL,
   `ciudad` varchar(255) CHARACTER SET latin1 NOT NULL,
   `telefono` varchar(255) CHARACTER SET latin1 NOT NULL,
-  `email` varchar(255) CHARACTER SET latin1 NOT NULL,
+  UNIQUE KEY `email` varchar(255) CHARACTER SET latin1 NOT NULL,
   `password` varchar(255) CHARACTER SET latin1 NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`id`)
